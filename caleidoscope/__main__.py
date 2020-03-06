@@ -3,7 +3,7 @@ from caleidoscope import draw
 from caleidoscope.ps4_controller import PS4Controller
 
 
-SCREEN_SIZE = 1280, 1024
+SCREEN_SIZE = 1024, 1280
 RECT_SIZE = 60, 60
 
 
