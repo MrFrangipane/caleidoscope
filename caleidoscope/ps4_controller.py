@@ -28,7 +28,7 @@ class FilteredPos:
     def compute_values(self):
         self.x.compute_value()
         self.y.compute_value()
-        self.angle = math.atan2(self.x.value, self.y.value)
+        self.angle = math.atan2(self.y.value, self.x.value)
 
     def __repr__(self):
         return "<Pos(x={}, y={}, a={})>".format(

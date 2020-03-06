@@ -3,18 +3,17 @@ import pygame
 from pygame import gfxdraw
 
 
-_THICKLINE_WIDTH = 300
+_THICKLINE_WIDTH = 20
 _DEG2RAD = math.pi / 180.0
 
 
 def _transform(x, y, position, angle):
-    angle = angle * _DEG2RAD
     x_ = position[0] + math.cos(angle) * x - math.sin(angle) * y
     y_ = position[1] + math.sin(angle) * x + math.cos(angle) * y
     return x_, y_
 
 
-def thick_line(surface, center, angle, thickness, color):
+def thick_line(surface, center, thickness, angle, color):
     x1, y1 = -_THICKLINE_WIDTH, thickness / 2
     x2, y2 = _THICKLINE_WIDTH, thickness / 2
     x3, y3 = -_THICKLINE_WIDTH, -thickness / 2
