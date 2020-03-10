@@ -72,7 +72,7 @@ class PS4Controller:
                 self.joystick_right.y.value_instantaneous = event.value
 
             if event.axis == 4:
-                self.trigger_right.value_instantaneous = (event.value + 1.0) / 2.0
+                self.trigger_right.value_instantaneous = max(0.0, (event.value + 1.0) / 2.0)
 
             if event.axis == 5:
-                self.trigger_left.value_instantaneous = (event.value + 1.0) / 2.0
+                self.trigger_left.value_instantaneous = max(0.0 , (event.value + 1.0) / 2.0)
